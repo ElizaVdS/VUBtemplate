@@ -52,7 +52,8 @@
 
 \flushbottom % Makes all text pages the same height
 
-\RequirePackage[dutch, english]{babel}
+\RequirePackage[dutch, english, french]{babel}
+\frenchbsetup{StandardLists=true}
 
 \RequirePackage{url}
 
