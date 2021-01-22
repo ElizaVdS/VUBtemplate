@@ -1,0 +1,130 @@
+% VUB Article 
+% Version 0.1 (2021-02-01)
+%
+% Modified from:
+% Stylish Article
+% LaTeX Template
+% Version 2.2 (2020-10-22)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Mathias Legrand (legrand.mathias@gmail.com)
+% With extensive modifications by:
+% Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[fleqn,11pt]{VUBArt} % Document font size and equations flushed left
+
+\usepackage[english]{babel} % Specify a different language here - english by default
+
+%----------------------------------------------------------------------------------------
+%	COLUMNS
+%----------------------------------------------------------------------------------------
+
+\setlength{\columnsep}{0.55cm} % Distance between the two columns of text
+\setlength{\fboxrule}{0.75pt} % Width of the border around the abstract
+
+%----------------------------------------------------------------------------------------
+%	COLORS
+%----------------------------------------------------------------------------------------
+
+\definecolor{color1}{RGB}{0,51,153} % Color of the article title and sections
+\definecolor{color2}{RGB}{0,20,20} % Color of the boxes behind the abstract and headings
+
+%----------------------------------------------------------------------------------------
+%	HYPERLINKS
+%----------------------------------------------------------------------------------------
+
+\usepackage{hyperref} % Required for hyperlinks
+
+\hypersetup{
+	hidelinks,
+	colorlinks,
+	breaklinks=true,
+	urlcolor=color2,
+	citecolor=color1,
+	linkcolor=color1,
+	bookmarksopen=false,
+	pdftitle={Title},
+	pdfauthor={Author},
+}
+
+%----------------------------------------------------------------------------------------
+%	ARTICLE INFORMATION
+%----------------------------------------------------------------------------------------
+
+$if(journalinfo)$
+\JournalInfo{$journalinfo$} % Journal information
+$else$
+\JournalInfo{\ }
+$endif$
+$if(archive)$
+\Archive{$archive$} % Additional notes (e.g. copyright, DOI, review/research article)
+$else$
+\Archive{\ }
+$endif$
+
+\PaperTitle{$title$} % Article title
+
+\Authors{$for(author)$$author.name$\textsuperscript{$author.authsuperscript$}$sep$\\ $endfor$
+} % Authors
+\affiliation{
+$for(affiliation)$\textsuperscript{$affiliation.affsuperscript$}$affiliation.dptuniv$\\ \hspace{1em} $affiliation.address$$sep$\\$endfor$
+}
+\affiliation{*\textbf{$corrauthorlabel$}: $corrauthor.email$, $if(corrauthor.url)$$corrauthor.url$$endif$} % Corresponding author
+
+\Keywords{$for(keywords)$$keywords$$sep$, $endfor$} % Keywords - if you don't want any simply remove all the text between the curly brackets
+\newcommand{\keywordname}{$keywordlabel$} % Defines the keywords heading name
+
+%----------------------------------------------------------------------------------------
+%	ABSTRACT
+%----------------------------------------------------------------------------------------
+
+\Abstract{$abstract$}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\selectlanguage{$babel$}
+
+\flushbottom % Makes all text pages the same height
+
+\maketitle % Output the title and abstract box
+
+\tableofcontents % Output the contents section
+
+\thispagestyle{empty} % Removes page numbering from the first page
+
+%----------------------------------------------------------------------------------------
+%	ARTICLE CONTENTS
+%----------------------------------------------------------------------------------------
+
+
+$body$
+
+%----------------------------------------------------------------------------------------
+%	REFERENCE LIST
+%----------------------------------------------------------------------------------------
+
+\bibliographystyle{mee}
+\makeatletter
+% The filename has .bib extension that must be eliminated
+\filename@parse{$bibliography$}
+% parse stores the file name in base. Extension starts at the first dot, so don't use dots in file names.
+\bibliography{\filename@base}
+\makeatother
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
