@@ -45,7 +45,7 @@
 \RequirePackage{natbib}  % Advanced bibliography
 \RequirePackage{xcolor}
 \RequirePackage{booktabs}
-\RequirePackage{lastpage} 
+\RequirePackage{lastpage}
 \AtEndOfClass{\RequirePackage{microtype}}
 
 \RequirePackage{ifpdf}      % Needed to pick between latex and pdflatex
@@ -53,11 +53,10 @@
 \flushbottom % Makes all text pages the same height
 
 \RequirePackage[dutch, english]{babel}
-\dutchbsetup{StandardLists=true} 
 
-\RequirePackage{url}  
+\RequirePackage{url}
 
-\RequirePackage{epstopdf}  
+\RequirePackage{epstopdf}
 
 \newcommand{\code}[1]{\begingroup \ttfamily #1\endgroup}% code command
 \def\Var{\mathop{\mathrm{Var}}} % Variance
@@ -155,7 +154,7 @@
 	{\sffamily\small\bfseries}
 	{}
 	{0em}
-	{#1} 
+	{#1}
 
 \titlespacing*{\section}{0pc}{3ex \@plus4pt \@minus3pt}{5pt}
 \titlespacing*{\subsection}{0pc}{2.5ex \@plus3pt \@minus2pt}{0pt}
@@ -166,7 +165,7 @@
 %	TABLE OF CONTENTS SETUP
 %----------------------------------------------------------------------------------------
 
-\newlength{\tocsep} 
+\newlength{\tocsep}
 \setlength\tocsep{1.5pc} % Sets the indentation of the sections in the table of contents
 \setcounter{tocdepth}{3} % Three levels in the table of contents section: sections, subsections and subsubsections
 
