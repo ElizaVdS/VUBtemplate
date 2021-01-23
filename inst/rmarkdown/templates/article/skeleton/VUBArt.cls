@@ -124,28 +124,28 @@
 \RequirePackage[explicit]{titlesec}
 
 \titleformat{\section}
-	{\color{color1}\large\sffamily\bfseries}
+	{\color{color3}\large\sffamily\bfseries}
 	{}
 	{0em}
-	{\colorbox{color2!10}{\parbox{\dimexpr\linewidth-2\fboxsep\relax}{\centering\thesection.\space#1}}}
+	{\colorbox{color1}{\parbox{\dimexpr\linewidth-2\fboxsep\relax}{\centering\thesection.\space#1}}}
 	[]
 
 \titleformat{name=\section,numberless}
-	{\color{color1}\large\sffamily\bfseries}
+	{\color{color3}\large\sffamily\bfseries}
 	{}
 	{0em}
-	{\colorbox{color2!10}{\parbox{\dimexpr\linewidth-2\fboxsep\relax}{\centering#1}}}
+	{\colorbox{color1}{\parbox{\dimexpr\linewidth-2\fboxsep\relax}{\centering#1}}}
 	[]
 
 \titleformat{\subsection}
-	{\color{color1}\sffamily\bfseries}
+	{\color{color2}\sffamily\bfseries}
 	{\thesubsection}
 	{0.5em}
 	{#1}
 	[]
 
 \titleformat{\subsubsection}
-	{\sffamily\small\bfseries}
+	{\color{color1}\sffamily\small\bfseries}
 	{\thesubsubsection}
 	{0.5em}
 	{#1}
@@ -247,7 +247,7 @@
 		\vskip20pt%
 		{\raggedright\color{color1}\sffamily\bfseries\fontsize{20}{25}\selectfont \@PaperTitle\par}%
 		\vskip10pt%
-		{\raggedright\color{color1}\sffamily\fontsize{12}{16}\selectfont \@Authors\par}%
+		{\raggedright\color{color2}\sffamily\fontsize{12}{16}\selectfont \@Authors\par}%
 		\vskip18pt%
 		\fcolorbox{color1}{white}{%
 			\parbox{\textwidth-2\fboxsep-2\fboxrule}{\centering%
