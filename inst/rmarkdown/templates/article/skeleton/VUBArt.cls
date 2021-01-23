@@ -92,7 +92,6 @@
 	labelfont={bf,sf,small},
 	labelsep=period,
 	justification=raggedright,
-	color={color1},
 
 ]{caption}
 
