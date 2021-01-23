@@ -92,7 +92,6 @@
 	labelfont={bf,sf,small},
 	labelsep=period,
 	justification=raggedright,
-
 ]{caption}
 
 \setlength{\abovecaptionskip}{3pt}
@@ -252,7 +251,7 @@
 		\vskip18pt%
 		\fcolorbox{color1}{white}{%
 			\parbox{\textwidth-2\fboxsep-2\fboxrule}{\centering%
-				\colorbox{color2}{%
+				\colorbox{color2!10}{%
 					\parbox{\textwidth-4\fboxsep-2\fboxrule}{%
 						\ifx\@Keywords\@empty%
 							\sffamily\textbf{\abstractname}\\\@Abstract%
