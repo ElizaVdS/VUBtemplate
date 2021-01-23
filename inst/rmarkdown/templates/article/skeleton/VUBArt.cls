@@ -251,7 +251,7 @@
 		\vskip18pt%
 		\fcolorbox{color1}{white}{%
 			\parbox{\textwidth-2\fboxsep-2\fboxrule}{\centering%
-				\colorbox{color2!50}{%
+				\colorbox{color2!30}{%
 					\parbox{\textwidth-4\fboxsep-2\fboxrule}{%
 						\ifx\@Keywords\@empty%
 							\sffamily\textbf{\abstractname}\\\@Abstract%
