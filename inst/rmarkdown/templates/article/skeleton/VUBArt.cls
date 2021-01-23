@@ -124,17 +124,17 @@
 \RequirePackage[explicit]{titlesec}
 
 \titleformat{\section}
-	{\color{color3}\large\sffamily\bfseries}
+	{\color{color1}\large\sffamily\bfseries}
 	{}
 	{0em}
-	{\colorbox{color1}{\parbox{\dimexpr\linewidth-2\fboxsep\relax}{\centering\thesection.\space#1}}}
+	{\colorbox{color1!10}{\parbox{\dimexpr\linewidth-2\fboxsep\relax}{\centering\thesection.\space#1}}}
 	[]
 
 \titleformat{name=\section,numberless}
-	{\color{color3}\large\sffamily\bfseries}
+	{\color{color1}\large\sffamily\bfseries}
 	{}
 	{0em}
-	{\colorbox{color1}{\parbox{\dimexpr\linewidth-2\fboxsep\relax}{\centering#1}}}
+	{\colorbox{color1!10}{\parbox{\dimexpr\linewidth-2\fboxsep\relax}{\centering#1}}}
 	[]
 
 \titleformat{\subsection}
@@ -249,9 +249,9 @@
 		\vskip10pt%
 		{\raggedright\color{color2}\sffamily\fontsize{12}{16}\selectfont \@Authors\par}%
 		\vskip18pt%
-		\fcolorbox{color1}{white}{%
+		\fcolorbox{color2}{white}{%
 			\parbox{\textwidth-2\fboxsep-2\fboxrule}{\centering%
-				\colorbox{color2!30}{%
+				\colorbox{color1!10}{%
 					\parbox{\textwidth-4\fboxsep-2\fboxrule}{%
 						\ifx\@Keywords\@empty%
 							\sffamily\textbf{\abstractname}\\\@Abstract%
