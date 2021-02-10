@@ -68,7 +68,7 @@
 
 \RequirePackage[utf8]{inputenc}  % For the accents
 \RequirePackage[T1]{fontenc}   % For the accents
-\RequirePackage{times} % Loads the Times Roman Fonts
+\RequirePackage{roboto}  % Loads the Times Roman Fonts
 \RequirePackage{mathptmx} % Loads the Times Roman Math Fonts
 
 %----------------------------------------------------------------------------------------
