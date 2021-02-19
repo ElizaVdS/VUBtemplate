@@ -230,9 +230,13 @@
 %	ABSTRACT AND AUTHOR FRAME
 %----------------------------------------------------------------------------------------
 
-\newcommand{\PaperTitle}[1]{\def\@PaperTitle{#1}}
+\newcommand{\papertitle}[1]{\def\@PaperTitle{#1}}
+\newcommand{\PaperTitle}{\expandafter\MakeUppercase
+                           \expandafter{\papertitle}}
 \newcommand{\Archive}[1]{\def\@Archive{#1}}
-\newcommand{\Authors}[1]{\def\@Authors{#1}}
+\newcommand{\authors}[1]{\def\@Authors{#1}}
+\newcommand{\Authors}{\expandafter\MakeUppercase
+                           \expandafter{\authors}}
 \newcommand{\JournalInfo}[1]{\def\@JournalInfo{#1}}
 \newcommand{\Abstract}[1]{\def\@Abstract{#1}}
 \newcommand{\Keywords}[1]{\def\@Keywords{#1}}
@@ -245,9 +249,9 @@
 		\vskip-36pt%
 		{\raggedleft\small\sffamily\bfseries\@JournalInfo\\\@Archive\par}%
 		\vskip20pt%
-		{\raggedleft\color{color1}\sffamily\bfseries\uppercase\fontsize{20}{25}\selectfont \@PaperTitle\par}%
+		{\raggedleft\color{color1}\sffamily\bfseries\fontsize{20}{25}\selectfont \@PaperTitle\par}%
 		\vskip10pt%
-		{\raggedleft\color{color2}\sffamily\bfseries\uppercase\fontsize{12}{16}\selectfont \@Authors\par}%
+		{\raggedleft\color{color2}\sffamily\bfseries\fontsize{12}{16}\selectfont \@Authors\par}%
 		\vskip18pt%
 		\fcolorbox{color2}{white}{%
 			\parbox{\textwidth-2\fboxsep-2\fboxrule}{\centering%
