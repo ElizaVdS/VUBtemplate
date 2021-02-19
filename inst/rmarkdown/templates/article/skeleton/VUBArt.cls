@@ -245,9 +245,9 @@
 		\vskip-36pt%
 		{\raggedleft\small\sffamily\bfseries\@JournalInfo\\\@Archive\par}%
 		\vskip20pt%
-		{\raggedleft\color{color1}\sffamily\bfseries\fontsize{20}{25}\selectfont \@PaperTitle\par}%
+		{\raggedleft\color{color1}\sffamily\bfseries\uppercase\fontsize{20}{25}\selectfont \@PaperTitle\par}%
 		\vskip10pt%
-		{\raggedleft\color{color2}\sffamily\bfseries\fontsize{12}{16}\selectfont \@Authors\par}%
+		{\raggedleft\color{color2}\sffamily\bfseries\uppercase\fontsize{12}{16}\selectfont \@Authors\par}%
 		\vskip18pt%
 		\fcolorbox{color2}{white}{%
 			\parbox{\textwidth-2\fboxsep-2\fboxrule}{\centering%
