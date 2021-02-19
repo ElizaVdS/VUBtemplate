@@ -230,13 +230,9 @@
 %	ABSTRACT AND AUTHOR FRAME
 %----------------------------------------------------------------------------------------
 
-\newcommand{\papertitle}[1]{\def\@PaperTitle{#1}}
-\newcommand{\PaperTitle}{\expandafter\MakeUppercase
-                           \expandafter{\papertitle}}
+\newcommand{\PaperTitle}[1]{\def\@PaperTitle{#1}}
 \newcommand{\Archive}[1]{\def\@Archive{#1}}
-\newcommand{\authors}[1]{\def\@Authors{#1}}
-\newcommand{\Authors}{\expandafter\MakeUppercase
-                           \expandafter{\authors}}
+\newcommand{\Authors}[1]{\def\@Authors{#1}}
 \newcommand{\JournalInfo}[1]{\def\@JournalInfo{#1}}
 \newcommand{\Abstract}[1]{\def\@Abstract{#1}}
 \newcommand{\Keywords}[1]{\def\@Keywords{#1}}
