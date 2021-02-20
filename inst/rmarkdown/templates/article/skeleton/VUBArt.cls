@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % VUB Article
 % Class File
-% Version 1.0 (2021-02-01)
+% Version 1.1 (2021-02-20)
 %
 % Modified from:
 % Stylish Article
@@ -80,9 +80,15 @@
 	right=2cm,
 	top=2.25cm,
 	bottom=2.25cm,
-	headheight=12pt,
+	headheight=23pt,
 	 a4paper,
 ]{geometry}
+
+%----------------------------------------------------------------------------------------
+%	PARAGRAPH
+%----------------------------------------------------------------------------------------
+
+\setlength{\parindent}{0pt}
 
 %----------------------------------------------------------------------------------------
 %	FIGURE AND TABLE CAPTIONS
@@ -124,35 +130,35 @@
 \RequirePackage[explicit]{titlesec}
 
 \titleformat{\section}
-	{\color{color1}\large\sffamily\bfseries}
+	{\color{color3}\scshape\large\sffamily\bfseries}
 	{}
 	{0em}
-	{\colorbox{color1!10}{\parbox{\dimexpr\linewidth-2\fboxsep\relax}{\centering\thesection.\space#1}}}
+	{\colorbox{color1}{\parbox{\dimexpr\linewidth-2\fboxsep\relax}{\raggedright\thesection.\space#1}}}
 	[]
 
 \titleformat{name=\section,numberless}
-	{\color{color1}\large\sffamily\bfseries}
+	{\color{color3}\scshape\large\sffamily\bfseries}
 	{}
 	{0em}
-	{\colorbox{color1!10}{\parbox{\dimexpr\linewidth-2\fboxsep\relax}{\centering#1}}}
+	{\colorbox{color1}{\parbox{\dimexpr\linewidth-2\fboxsep\relax}{\raggedright#1}}}
 	[]
 
 \titleformat{\subsection}
-	{\color{color2}\sffamily\bfseries}
-	{\thesubsection}
-	{0.5em}
-	{#1}
+	{\color{color3}\scshape\large\sffamily\bfseries}
+	{}
+	{0em}
+	{\colorbox{color2}{\parbox{\dimexpr\linewidth-2\fboxsep\relax}{\raggedright\thesubsection.\space#1}}}
 	[]
 
 \titleformat{\subsubsection}
-	{\color{color1}\sffamily\small\bfseries}
+	{\color{color1}\sffamily\scshape\small\bfseries}
 	{\thesubsubsection}
 	{0.5em}
 	{#1}
 	[]
 
 \titleformat{\paragraph}[runin]
-	{\sffamily\small\bfseries}
+	{\sffamily\scshape\small\bfseries}
 	{}
 	{0em}
 	{#1}
@@ -245,27 +251,31 @@
 		\vskip-36pt%
 		{\raggedleft\small\sffamily\bfseries\@JournalInfo\\\@Archive\par}%
 		\vskip20pt%
-		{\raggedleft\color{color1}\sffamily\bfseries\fontsize{20}{25}\selectfont \@PaperTitle\par}%
+		{\raggedleft\color{color1}\sffamily\bfseries\fontsize{20}{25}\selectfont\scshape\LARGE \@PaperTitle\par}%
 		\vskip10pt%
-		{\raggedleft\color{color2}\sffamily\bfseries\fontsize{12}{16}\selectfont \@Authors\par}%
+		{\raggedleft\color{color2}\sffamily\bfseries\fontsize{12}{16}\selectfont\scshape\Large \@Authors\par}%
 		\vskip18pt%
-		\fcolorbox{color2}{white}{%
+		\fcolorbox{color3}{color1}{%
 			\parbox{\textwidth-2\fboxsep-2\fboxrule}{\centering%
-				\colorbox{color1!10}{%
+
 					\parbox{\textwidth-4\fboxsep-2\fboxrule}{%
 						\ifx\@Keywords\@empty%
-							\sffamily\textbf{\abstractname}\\\@Abstract%
+							\colorbox{color2}{\color{color3}\sffamily\scshape\textbf{\abstractname}}
+							\color{color3}\sffamily\\\@Abstract%
 						\else%
-							\sffamily\textbf{\abstractname}\\\@Abstract\\[4pt]%
-							\textbf{\keywordname}\\\@Keywords%
+							\colorbox{color2}{\color{color3}\sffamily\scshape\textbf{\abstractname}}
+							\color{color3}\sffamily\\\@Abstract\\[4pt]%
+							\colorbox{color2}{\color{color3}\sffamily\scshape\textbf{\keywordname}}
+							\color{color3}\sffamily\\\@Keywords%
 						\fi%
-					}%
-				}%
-				\vskip4pt%
+					\vskip4pt%
 				\begingroup%
 					\raggedright\sffamily\small%
 					\footnotesize\@affiliation\par%
 				\endgroup%%
+					}%
+
+
 			}%
 		}%
 		\vskip25pt%
